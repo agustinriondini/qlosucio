@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Juego de cartas muy conocido en Argentina.">
+    <!--css-->
+    <link rel="stylesheet" href="./Resources/UI/reset.css">
+    <link rel="stylesheet" href="./Resources/UI/gameCenter.css">
+    <link rel="stylesheet" href="./Resources/UI/jugadores.css">
+    <link rel="stylesheet" href="./Resources/UI/main.css">
+    <link rel="stylesheet" href="./Resources/UI/menuContainer.css">
+    <link rel="stylesheet" href="./Resources/UI/versionContent.css">
+    <link rel="stylesheet" href="./Resources/UI/footer.css">
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./Resources/Game/menu.js"></script>
+    <script src="./Resources/Game/jugadores.js"></script>
+    <script src="./Resources/Game/mazo.js"></script>
+    <script src="./Resources/Game/reboot.js"></script>
+    <script src="./Resources/Game/ajustes.js"></script>
+    <script src="./Resources/Game/version.js"></script>
+    <script src="./Resources/Game/rules.js"></script>
+    <title>Q-lo Sucio</title>
+</head>
+<body id="body">
+    <section id="gameDataSection">
+        <div class="gameDataContainer">
+            <div class="playerContainer">
+                <span id="avatarPlayer0" class="avatar"></span>
+                <select name="selectorDificultad" id="oponente" required>
+                    <option value="vsCpu" selected>Versus CPU</option>
+                    <option value="allIn" hidden>Local versus</option>
+                    <option value="online" hidden>En linea</option>
+                </select>
+                <span id="machinePoints" class="points">0</span>
+            </div>
+            <div class="playerContainer">
+                <span id="avatarPlayer1" class="avatar" onclick="changeAvatar()">🤣</span>
+                <span id="player1"class="player">Player1</span>
+                <span id="playerPoints" class="points">0</span>
+            </div>
+        </div>
+    </section>
+    <main id="gameArea">
+        <button id="menuToggle">|||</button>
+        <div class="menuContainer" id="mainMenu">
+            <button class="closeBtn" id="close" onclick="close()">Cerrar</button>
+            <div class="btnContainer">
+                <button class="menuBtn" id="rules" onclick="rules()">Reglas ▤</button>
+                <button class="menuBtn" id="play">Volver a jugar ▶</button>
+                <button class="menuBtn" id="tools" onclick="showAjustes()">Ajustes ↹</button>
+            </div>
+        </div>
+        <div id="ajustes" class="menuContainer" style="display: none">
+            <button class="closeBtn" id="backBtn"  onclick="backToMainMenu()">← Volver</button>
+            <div class="btnContainer">
+                <button class="menuBtn" onclick="borrarPuntaje()">Borrar puntaje ▤</button>
+                <button class="menuBtn" onclick="cambiarMesa()">Cambiar mesa ▦</button>
+                <button class="menuBtn" onclick="editarNombreJugador()">Editar nombre jugador ▱</button>
+            </div>
+        </div>
+        <div id="table">
+            <div class="mazosContainer">
+                <div id="mazo">
+                    <div id="oro1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro1.png);"></div>
+                    <div id="oro2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro2.png);"></div>
+                    <div id="oro3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro3.png);"></div>
+                    <div id="oro4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro4.png);"></div>
+                    <div id="oro5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro5.png);"></div>
+                    <div id="oro6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro6.png);"></div>
+                    <div id="oro7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro7.png);"></div>
+                    <div id="oro8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro8.png);"></div>
+                    <div id="oro9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro9.png);"></div>
+                    <div id="oro10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro10.png);"></div>
+                    <div id="oro11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro12.png);"></div>
+                    <div id="oro12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto1.png);"></div>
+                    <div id="espada1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada1.png);"></div>
+                    <div id="espada2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada2.png);"></div>
+                    <div id="espada3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada3.png);"></div>
+                    <div id="espada4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada4.png);"></div>
+                    <div id="espada5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada5.png);"></div>
+                    <div id="espada6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada6.png);"></div>
+                    <div id="espada7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada7.png);"></div>
+                    <div id="espada8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada8.png);"></div>
+                    <div id="espada9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada9.png);"></div>
+                    <div id="espada10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada10.png);"></div>
+                    <div id="espada11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada11.png);"></div>
+                    <div id="espada12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada12.png);"></div>
+                    <div id="basto1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto1.png);"></div>
+                    <div id="basto2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto2.png);"></div>
+                    <div id="basto3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto3.png);"></div>
+                    <div id="basto4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto4.png);"></div>
+                    <div id="basto5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto5.png);"></div>
+                    <div id="basto6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto6.png);"></div>
+                    <div id="ba7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto7.png);"></div>
+                    <div id="basstoto8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto8.png);"></div>
+                    <div id="basto9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto9.png);"></div>
+                    <div id="basto10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto10.png);"></div>
+                    <div id="basto11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto11.png);"></div>
+                    <div id="basto12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto12.png);"></div>
+                    <div id="copa1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa1.png);"></div>
+                    <div id="copa2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa2.png);"></div>
+                    <div id="copa3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa3.png);"></div>
+                    <div id="copa4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa4.png);"></div>
+                    <div id="copa5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa5.png);"></div>
+                    <div id="copa6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa6.png);"></div>
+                    <div id="copa7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa7.png);"></div>
+                    <div id="copa8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa8.png);"></div>
+                    <div id="copa9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa9.png);"></div>
+                    <div id="copa10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa10.png);"></div>
+                    <div id="copa11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa11.png);"></div>
+                    <div id="copa12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa12.png);"></div>
+                </div>
+                <div id="waste"></div>
+            </div>
+        </div>
+        <button id="userDrawButton"></button>
+        <button id="rebootOverlay" style="display: none">↺</button>
+    </main>
+</body>
+<footer id="allFooter">
+    <div class="footerContainer">
+        <div class="footerBoxes">
+            <ul>
+                <li><a href="https://www.facebook.com/agustin.riondini.94/"><img src="./Resources/Images/Meta/facebook.png" alt="facebook_icon" class="socialPic">Facebook</a></li>
+                <li><a href="https://www.instagram.com/agustinriondini/"><img src="./Resources/Images/Meta/instagram.png" alt="instagram_icon" class="socialPic">Instagram</a></li>
+                <li><a href="https://github.com/agustinriondini"><img src="./Resources/Images/Meta/github.png" alt="github_icon" class="socialPic">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/juan-agustin-riondini-2226a6195/"><img src="./Resources/Images/Meta/linkedin.png" alt="linkedin_icon" class="socialPic">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="footerBoxes">
+            <div class="buttonContainer">
+                <a class="btn" href="mailto:juan.riondini@gmail.com">Contacto</a>
+                <!--a class="btn" href="https://forms.gle/67McXcnE57ZMZUQGA" target="_blank">Reportar errores!</a-->
+            </div>
+        </div>
+    </div>
+    <div class="version">
+        <span class="compilacion" id="updateVer">Corroborando version. Espere...</span>
+        <h6 class="jarsoft">JARSoft</h6>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,27 @@
+.version{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.compilacion{
+    display: flex;
+    margin: auto;
+    height: 100%;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.jarsoft{
+    display: flex;
+    margin: auto;
+    font-size: 1rem;
+    color: #fff;
+    font-style: italic;
+}

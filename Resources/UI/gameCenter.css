@@ -1,0 +1,46 @@
+/*UI contenedor principal. Banner top*/
+#gameDataSection{
+    width: 100lvw;
+    min-width: 300px;
+    max-width: 1000px;
+    height: 15lvh;
+    min-height: 100px;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px #fff;;
+}
+.gameDataContainer{
+    width: 90%;
+    min-width: 300px;
+    height: 100%;
+    min-height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem auto;
+}
+.points{
+    text-align: center;
+    margin: auto;
+    color: #fff;
+}
+#oponente{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+
+}
+option{
+    color: black;
+}
+

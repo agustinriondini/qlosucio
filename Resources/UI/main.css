@@ -1,0 +1,127 @@
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+#gameArea{
+    width: 100lvw;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+body{
+    background-image: url(../Images/Table/mesa_madera.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+#table{
+    width: 90%;
+    min-width: 270px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+#mazo, #userDrawButton{
+    position: absolute;
+    background-color: rgba(255, 194, 39, 0.5);
+    backdrop-filter: blur(20px);
+    width: 20lvw;
+    min-width: 60px;
+    max-width: 200px;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    left: 20%;
+    top: 40%;
+    rotate: -25deg;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    margin: auto;
+    border-radius: 12.5px;
+    justify-content: center;
+    align-items: center;
+}
+#waste{
+    position: absolute;
+    background-color: none;
+    width: 20lvw;
+    min-width: 60px;
+    max-width: 200px;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20%;
+    top: 40%;
+    margin: auto;
+}
+.card{
+    width: 20lvw;
+    min-width: 60px;
+    max-width: 200px;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 12.5px;
+    background-size: contain;
+    box-shadow: 0px 0px 2px black;
+    
+}
+/*Reboot button grande al finalizar juego*/
+#rebootOverlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+    width: 30%;
+    min-width: 150px;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    border: solid 0.1rem #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px grey;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+#rebootOverlay:hover{
+    background-color: rgba(153, 205, 50, 0.6);
+    animation: rotateAnimation 2s linear infinite;
+
+}
+#rebootOverlay:active{
+    background-color: greenyellow;
+}
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg); /* Inicia la rotación desde 0 grados */
+    }
+    to {
+        transform: rotate(-360deg); /* Finaliza la rotación en 360 grados (una vuelta completa) */
+    }
+}
+/*Correcciones visuales temporales*/
+@media (min-width: 700px) {
+    #mazo, #userDrawButton{
+        left: 22%;
+        top: 60%;
+        
+    }
+    #waste{
+        right: 30%;
+    }
+    #menuToggle{
+        left: 20%;
+    }
+}

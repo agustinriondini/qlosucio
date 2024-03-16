@@ -1,0 +1,55 @@
+/*Turno---parpadeo del avatar*/
+@keyframes parpadeo {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: green;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+.avatar.turno {
+    animation: parpadeo 1s infinite;
+    border: 5px solid transparent;
+}
+.playerContainer{
+    width: 50%;
+    min-width: 140px;
+    height: 100%;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.avatar{
+    width: 20%;
+    min-width: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#avatarPlayer0{
+    background-image: url("../Images/Pics/cpu.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#avatarPlayer1{
+    background-image: url("..//Images/Pics/michi.avif");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.player{
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+}

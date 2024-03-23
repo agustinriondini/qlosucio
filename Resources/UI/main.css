@@ -3,12 +3,13 @@ html{
 
 }
 #gameArea{
-    width: 100lvw;
+    width: 100%;
     min-width: 300px;
     max-width: 1000px;
     height: auto;
     min-height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -17,6 +18,11 @@ body{
     background-image: url(../Images/Table/mesa_madera.jpg);
     background-size: cover;
     background-repeat: round;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;;
 }
 #table{
     width: 90%;
@@ -141,5 +147,20 @@ body{
     #waste{
         right: 10%;
         top: 30%;
+    }
+}
+@media only screen and (orientation: landscape){
+    #mazo, #userDrawButton{
+        left: 22%;
+        top: 70%;
+        
+    }
+    #waste{
+        top: 70%;
+        right: 20%;
+    }
+    #menuToggle{
+        top: 40%;
+        left: 20%;
     }
 }

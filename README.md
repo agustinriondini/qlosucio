@@ -1,4 +1,10 @@
 =================================================
+## v1.1.3 open_betta_v1.1.3_RC2-build#3(23032024)
+
+-[Bugfix] Correccion de superposiciones visual de los elementos principales en dispositivos moviles.
+-[Update] Version actulalizada.
+-[Update] Cambios registrados en el readme.md
+=================================================
 ## v1.1.2 open_betta_v1.1.2_RC2-build#2(23032024)
 ## Incluye correcciones y nuevas funcionalidades
 

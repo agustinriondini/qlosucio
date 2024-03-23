@@ -18,7 +18,7 @@
     width: 50%;
     min-width: fit-content;
     height: 100%;
-    min-height: fit-content;
+    max-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
 }
 .avatar{
     width: 20%;
-    min-width: 60px;
+    min-width: 20px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     display: flex;
@@ -61,9 +61,15 @@
     color: black;
 }
 /*Solucion a la superposicion en pantallas pequeñas*/
-@media (max-width: 400px) {
+@media only screen and (max-width: 600px) {
     .playerContainer{
+        display: flex;
         flex-direction: column;
+        height: auto;
         min-height: fit-content;
-    } 
+    }
+    .avatar{
+        max-width: 20px;
+        aspect-ratio: 1/1;
+    }
 }

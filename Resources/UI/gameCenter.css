@@ -3,9 +3,9 @@
     width: 100lvw;
     min-width: 300px;
     max-width: 1000px;
-    height: 15lvh;
+    height: 15%;
     min-height: fit-content;
-    max-height: 300px;
+    max-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,9 +17,10 @@
     width: 90%;
     min-width: 300px;
     height: 100%;
+    max-height: 400px;
     min-height: fit-content;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 1rem auto;
 }

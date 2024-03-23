@@ -1,0 +1,20 @@
+.optionDorso{
+    width: 100%;
+    min-width: 60px;
+    max-width: 100px;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: fill;
+    margin: auto;
+    border: solid 0.1rem black;
+    border-radius: 12.5px;
+    background-color: #fff;
+    cursor: pointer;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+.optionDorso:hover {
+    filter: brightness(1.2); /* Aumenta el brillo en hover */
+}

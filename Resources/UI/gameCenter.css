@@ -4,8 +4,8 @@
     min-width: 300px;
     max-width: 1000px;
     height: 15lvh;
-    min-height: 100px;
-    max-height: 200px;
+    min-height: fit-content;
+    max-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,4 +43,6 @@
 option{
     color: black;
 }
-
+.pointsStyle{
+    color: #fff;
+}

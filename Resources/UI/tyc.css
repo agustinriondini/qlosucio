@@ -1,0 +1,108 @@
+#popup{
+  width: 100vw;
+  max-width: 300px;
+  max-width: 1000px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  z-index: 99999;
+}
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+  min-width: 270px;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: solid 0.1rem #fff;
+  border-radius: 12.5px;
+  box-shadow: 0px 0px 10px grey;
+}
+#tyc-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  width: 85%;
+  min-width: 240px;
+  height: auto;
+  max-height: 250px; 
+  overflow-y: auto;
+  color: #fff;
+  line-height: 1.5rem;
+}
+.popup-content h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: bolder;
+  margin: 0.5rem auto;
+}
+.finalContent{
+  width: 70%;
+  min-width: 270px;
+  max-width: 500px;
+  height: auto;
+  min-height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.popup-content label, .checklabel {
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+}
+#accept-button:disabled{
+    cursor: not-allowed;
+    width: 20%;
+    min-width: 100px;
+    aspect-ratio: 3/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
+    background-color: grey;
+    border: none;
+}
+#accept-button:disabled:hover{
+  background-color: grey;
+}
+#accept-button:enabled {
+  color: #fff;
+  font-weight: bolder;
+  width: 20%;
+  min-width: 100px;
+  aspect-ratio: 3/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 0.1rem #fff;
+}
+#accept-button:hover{
+  background-color: rgba(218, 165, 32, 0.7);
+  transition: background-color 0.3s ease;
+}
+#accept-checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem auto;
+  cursor: pointer;
+}
+  

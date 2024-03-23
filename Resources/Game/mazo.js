@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // cuando pierde la cpu
             if (cartaActual.id === "oro1") {
                 gameStatus = true;
-                alert("¡Ganaste, la CPU tiene el Q-lo sucio!");
+                alert("¡Ganaste, la Rookie tiene el Q-lo sucio!");
                 restarPuntos("machinePoints", 25);
                 reiniciarJuego();
                 return;
@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // cuando pierde el usuario
             if (cartaActual.id === "oro1") {
                 gameStatus = true;
-                alert("¡Perdiste, ya se sentía el olor hasta!");
-                restarPuntos("machinePoints", 25);
+                alert("¡Perdiste!");
+                restarPuntos("playerPoints", 25);
                 reiniciarJuego();
                 userDrawButton.disabled = true;
                 return;

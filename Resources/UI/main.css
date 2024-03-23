@@ -7,6 +7,7 @@ html{
     min-width: 300px;
     max-width: 1000px;
     height: auto;
+    min-height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,14 +24,13 @@ body{
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
 }
 #mazo, #userDrawButton{
-    position: absolute;
-    background-color: rgba(255, 194, 39, 0.5);
-    backdrop-filter: blur(20px);
+    position: absolute; 
     width: 20lvw;
-    min-width: 60px;
+    min-width: 100px;
     max-width: 200px;
     aspect-ratio: 1/1.5;
     display: flex;
@@ -44,11 +44,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+#userDrawButton{
+    background-image: url(../Mazo/Dorsos/españolas.png);
+    background-size: 100%;
+    background-repeat: round;
+    background-position: center;
+}
 #waste{
     position: absolute;
     background-color: none;
     width: 20lvw;
-    min-width: 60px;
+    min-width: 100px;
     max-width: 200px;
     aspect-ratio: 1/1.5;
     display: flex;
@@ -56,11 +62,12 @@ body{
     align-items: center;
     right: 20%;
     top: 40%;
+    z-index: 1;
     margin: auto;
 }
 .card{
-    width: 20lvw;
-    min-width: 60px;
+    width: 100%;
+    min-width: 100px;
     max-width: 200px;
     aspect-ratio: 1/1.5;
     display: flex;
@@ -69,39 +76,44 @@ body{
     position: absolute;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: transparent;
     border-radius: 12.5px;
     background-size: contain;
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 1px black;
+    border: solid 0.1rem black;
     
 }
 /*Reboot button grande al finalizar juego*/
 #rebootOverlay{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
     position: absolute;
-    z-index: 9;
-    width: 30%;
-    min-width: 150px;
+    background-color: rgba(218, 165, 32, 0.6);
+    width: 20lvw;
+    min-width: 100px;
     max-width: 200px;
     aspect-ratio: 1/1;
     border: solid 0.1rem #fff;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px grey;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
-    font-size: 5rem;
     color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    z-index: 3;
+    margin: auto;
+    box-shadow: 0px 0px 10px grey;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    
 }
 #rebootOverlay:hover{
-    background-color: rgba(153, 205, 50, 0.6);
+    background-color: rgba(218, 165, 32, 0.8);
     animation: rotateAnimation 2s linear infinite;
 
 }
 #rebootOverlay:active{
-    background-color: greenyellow;
+    opacity: 100%;
+    cursor: progress;
 }
 @keyframes rotateAnimation {
     from {
@@ -123,5 +135,11 @@ body{
     }
     #menuToggle{
         left: 20%;
+    }
+}
+@media (max-width: 400px) {
+    #waste{
+        right: 10%;
+        top: 30%;
     }
 }

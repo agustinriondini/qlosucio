@@ -5,51 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Juego de cartas muy conocido en Argentina.">
+    <meta name="description" content="Juego de cartas de azar, estilo ruleta rusa. Edad recomendada: +5">
+    <meta name="keywords" content="cartas, culo sucio, qlo sucio, juego cartas, juego azar, argentina">
+    <meta name="author" content="JARSoft- Agustin Riondini">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Cache-Control" content="max-age=604800">
     <!--css-->
+    <link rel="shortcut icon" href="./Resources/Images/Meta/cartas_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./Resources/UI/reset.css">
+    <link rel="stylesheet" href="./Resources/UI/menuToggle.css">
+    <link rel="stylesheet" href="./Resources/UI/menuContainer.css">
+    <link rel="stylesheet" href="./Resources/UI/cambiarAvatar.css">
+    <link rel="stylesheet" href="./Resources/UI/cambiarDorso.css">
+    <link rel="stylesheet" href="./Resources/UI/cambiarMesa.css">
+    <link rel="stylesheet" href="./Resources/UI/tyc.css">
     <link rel="stylesheet" href="./Resources/UI/gameCenter.css">
     <link rel="stylesheet" href="./Resources/UI/jugadores.css">
     <link rel="stylesheet" href="./Resources/UI/main.css">
-    <link rel="stylesheet" href="./Resources/UI/menuContainer.css">
+    <link rel="stylesheet" href="./Resources/UI/estadisticas.css">
+    <link rel="stylesheet" href="./Resources/UI/help.css">
     <link rel="stylesheet" href="./Resources/UI/versionContent.css">
     <link rel="stylesheet" href="./Resources/UI/footer.css">
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./Resources/Game/menu.js"></script>
-    <script src="./Resources/Game/jugadores.js"></script>
+    <script src="./Resources/Game/tyc.js"></script>
     <script src="./Resources/Game/mazo.js"></script>
     <script src="./Resources/Game/reboot.js"></script>
     <script src="./Resources/Game/ajustes.js"></script>
     <script src="./Resources/Game/version.js"></script>
+    <script src="./Resources/Game/estadisticas.js"></script>
     <script src="./Resources/Game/rules.js"></script>
     <title>Q-lo Sucio</title>
 </head>
 <body id="body">
+    <div id="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Términos y Condiciones</h2>
+            <div id="tyc-content">Cargando los terminos y condiciones...</div>
+            <div class="finalContent">
+                <p class="checklabel">Al hacer clic en "Aceptar", usted acepta los términos y condiciones del juego "Q-Lo Sucio" desarrollado por JARSoft.</p>
+                <label for="accept-checkbox"><input type="checkbox" id="accept-checkbox">Acepto los términos y condiciones</label>
+                <button id="accept-button" onclick="closePopup()" disabled>Aceptar</button>
+            </div>
+        </div>
+    </div>
     <section id="gameDataSection">
         <div class="gameDataContainer">
             <div class="playerContainer">
                 <span id="avatarPlayer0" class="avatar"></span>
                 <select name="selectorDificultad" id="oponente" required>
-                    <option value="vsCpu" selected>Versus CPU</option>
+                    <option value="vsCpu" selected>VS Rookie</option>
                     <option value="allIn" hidden>Local versus</option>
                     <option value="online" hidden>En linea</option>
                 </select>
                 <span id="machinePoints" class="points">0</span>
+                <h4 class="pointsStyle">Puntos</h4>
             </div>
             <div class="playerContainer">
-                <span id="avatarPlayer1" class="avatar" onclick="changeAvatar()">🤣</span>
-                <span id="player1"class="player">Player1</span>
-                <span id="playerPoints" class="points">0</span>
+                <span id="avatarPlayer1" class="avatar" onclick="mostrarAvatars()"></span>
+                <span id="player1"class="player" onclick="editarNombreJugador()">haz click aqui</span>
+                <span id="playerPoints" class="points">0</span><h4 class="pointsStyle">Puntos</h4>
             </div>
         </div>
     </section>
     <main id="gameArea">
         <button id="menuToggle">|||</button>
-        <div class="menuContainer" id="mainMenu">
-            <button class="closeBtn" id="close" onclick="close()">Cerrar</button>
+        <div id="mainMenu" class="menuContainer" style="display: none">
+            <button class="closeBtn" id="close" onclick="close()">Cerrar ✕</button>
             <div class="btnContainer">
-                <button class="menuBtn" id="rules" onclick="rules()">Reglas ▤</button>
+                <button class="menuBtn" id="gameintro" onclick="gameintro()">Q-Lo sucio ▤</button>
+                <button class="menuBtn" id="rules" onclick="rules()">Como jugar 🎮</button>
                 <button class="menuBtn" id="play">Volver a jugar ▶</button>
                 <button class="menuBtn" id="tools" onclick="showAjustes()">Ajustes ↹</button>
             </div>
@@ -57,9 +83,108 @@
         <div id="ajustes" class="menuContainer" style="display: none">
             <button class="closeBtn" id="backBtn"  onclick="backToMainMenu()">← Volver</button>
             <div class="btnContainer">
-                <button class="menuBtn" onclick="borrarPuntaje()">Borrar puntaje ▤</button>
-                <button class="menuBtn" onclick="cambiarMesa()">Cambiar mesa ▦</button>
+                <button class="menuBtn" id="estadisticasLocales" onclick="estadisticas()">Mi puntaje ⇗</button>
                 <button class="menuBtn" onclick="editarNombreJugador()">Editar nombre jugador ▱</button>
+                <button class="menuBtn" id="mostrarAvatarsButton" onclick="mostrarAvatars()">Cambiar avatar 🙋</button>
+                <button class="menuBtn" id="mostrarMesasButton" onclick="mostrarMesas()">Cambiar mesa ▦</button>
+                <button class="menuBtn" onclick="cambiarMazo()" disabled style="cursor: not-allowed;">Cambiar mazo ♣️</button>
+                <button class="menuBtn" onclick="cambiarDorso()">Cambiar dorso mazo ⌀</button>
+                <button class="menuBtn" onclick="borrarPuntaje()">Borrar puntaje ▤</button>
+                <button class="menuBtn" onclick="helpme()">Ayuda ⟫</button>
+                <button class="menuBtn" onclick="tyc()">Terminos (TYC) ▤</button>
+            </div>
+        </div>
+        <div id="estadisticas"  style="display: none;">
+            <div class="estadisticasBtn">
+                <button class="closeBtn" id="backToSettings" onclick="backToSettings()">← Volver</button>
+                <button class="closeBtn" id="close" onclick="closeAll()">Cerrar ✕</button>
+            </div>
+            <div class="metricas">
+                <div id="metricasUsuario">
+                    <span id="avatarPlayer1Estadisticas" class="avatar-estadistica"></span>
+                    <span id="player1Estadisticas" class="user-estadistica">***</span>
+                    <span id="playerPointsEstadisticas" class="user-estadistica">***</span>
+                </div>
+                <div id="resultados-estadisticas">
+                    <div class="indice-metrico">
+                        <h5 class="title-metricas">Nivel de suciedad:</h5>
+                        <span class="metricas-value" id="nivelSuciedad">Lo descubriremos</span>
+                    </div>
+                    <div class="indice-metrico">
+                        <h5 class="title-metricas">Porcentaje de victorias</h5>
+                        <span class="metricas-value" id="perVictorias">0%</span>
+                    </div>
+                    <div class="indice-metrico">
+                        <h5 class="title-metricas">Veredicto UNO DE ORO<span id="alertIcon" onclick="alertIcon()"></span></h5>
+                        <span class="metricas-value" id="letalidad">No disponible</span>
+                    </div>
+                    <div class="indice-metrico">
+                        <h5 class="title-metricas">Partidas jugadas:</h5>
+                        <span class="metricas-value" id="totalRondas">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="avatarsBox" class="menuContainer" style="display: none">
+            <button class="closeBtn" id="backToSettings"  onclick="backToSettings()">← Volver</button>
+            <div id="avatarsContainer" class="submenuContainer">
+                <img src="./Resources/Images/Pics/avatar_emmaR!Copyright2024.jpg" alt="Avatar_EmmaR!Copyright2024" class="optionAvatar" onclick="pushAvatar(this)">
+                <img src="./Resources/Images/Pics/avatar2_emmaR!Copyright2024.jpg" alt="Avatar2_EmmaR!Copyright2024" class="optionAvatar" onclick="pushAvatar(this)">
+                <img src="./Resources/Images/Pics/adulto.png" alt="Avatar 1" class="optionAvatar" onclick="pushAvatar(this)">
+                <img src="./Resources/Images/Pics/michi.avif" alt="Avatar 2" class="optionAvatar" onclick="pushAvatar(this)">
+                <img src="./Resources/Images/Pics/niña.png" alt="Avatar 3" class="optionAvatar" onclick="pushAvatar(this)">
+                <img src="./Resources/Images/Pics/niño.png" alt="Avatar 4" class="optionAvatar" onclick="pushAvatar(this)">
+                <img src="./Resources/Images/Pics/niño2.jpg" alt="Avatar 5" class="optionAvatar" onclick="pushAvatar(this)">
+            </div>
+        </div>
+        <div id="dorsosBox" class="menuContainer" style="display: none">
+            <button class="closeBtn" id="backToSettings"  onclick="backToSettings()">← Volver</button>
+            <div id="dorsoContainer" class="submenuContainer">
+                <img src="./Resources/Mazo/Dorsos/dorso1.png" alt="Dorso 1" class="optionDorso" onclick="pushDorso(this)">
+                <img src="./Resources/Mazo/Dorsos/dorso2.png" alt="Dorso 2" class="optionDorso" onclick="pushDorso(this)">
+                <img src="./Resources/Mazo/Dorsos/dorso3.png" alt="Dorso 3" class="optionDorso" onclick="pushDorso(this)">
+                <img src="./Resources/Mazo/Dorsos/dorso4.png" alt="Dorso 4" class="optionDorso" onclick="pushDorso(this)">
+                <img src="./Resources/Mazo/Dorsos/españolas.png" alt="Españolas" class="optionDorso" onclick="pushDorso(this)">
+            </div>
+        </div>
+        <div id="mesasBox" class="menuContainer" style="display : none">
+            <button class="closeBtn" id="backToSettings"  onclick="backToSettings()">← Volver</button>
+            <div id="mesasContainer" class="submenuContainer">
+                <img src="./Resources/Images/Table/mesa_madera.jpg" alt="Deck_madera" class="texturaMesa" onclick="pushBackground(this)">
+                <img src="./Resources/Images/Table/casino.jpg" alt="Casino_red_carpet" class="texturaMesa" onclick="pushBackground(this)">
+                <img src="./Resources/Images/Table/casino_green_carpet.jpg" alt="Casino_green_carpet" class="texturaMesa" onclick="pushBackground(this)">
+                <img src="./Resources/Images/Table/rattan_table.jpg" alt="Rattan" class="texturaMesa" onclick="pushBackground(this)">
+                <img src="./Resources/Images/Table/grass_texture.avif" alt="Pasto-Grass" class="texturaMesa" onclick="pushBackground(this)">
+            </div>
+        </div>
+        <div id="helpBox" class="menuContainer" style="display:  none;">
+            <button class="closeBtn" id="backToSettings"  onclick="backToSettings()">← Volver</button>
+            <div id="helpContainer" class="submenuContainer">
+                <h3 class="helpTitle">Ayuda</h3>
+                <div class="issue">
+                    <h4 class="issueTitle">Las imagenes no se ven correctamente</h4>
+                    <p class="issueDescript">Si tienes problemas con la visualizacion de las imagenes del juego, podemos intentar solucionarlo. Ve a "Ajustes → Borrar puntaje". Esto eliminara los datos almacenados en caché del juego. Ten en cuenta que tus puntajes tambien seran eliminados. Si esto no lo soluciona, puedes intentar eliminando el caché del navegador que ejecuta el juego. Si nada de esto funciona, puedes contactarme por email.</p>
+                </div>
+                <div class="issue">
+                    <h4 class="issueTitle">La partida no incia</h4>
+                    <p class="issueDescript">Por el momento, solo es posible enfrentarse a Rookie. El tomará automaticamente una carta cada vez que sea su turno. Si esto no sucede, refresca el navegador. El alternador de turnos pondra un borde verde parpadeante señalizando cuando es el turno de cada jugador.</p>
+                </div>
+                <div class="issue">
+                    <h4 class="issueTitle">Visualizacion</h4>
+                    <p class="issueDescript">El juego deberia adapatarse automáticamente a cada dispositivo. Si esto no ocurriera, el tamaño minimo de ancho de pantalla es de (300 x 600)px. Es aconsejable jugarlo en dispositivos que al menos cumplan este requisito.</p>
+                </div>
+                <div class="issue">
+                    <h4 class="issueTitle">Rendimiento</h4>
+                    <p class="issueDescript">Si bien es realizado un test de rendimiento antes de actualizar cada version, si el juego funciona lento en tu dispositivo puede deberse a la velocidad de conexion o memoria ram disponible. Dependiendo del navegador que utilices, variará la cantidad de ram minima. Tambien podes reportar el error o el inconveniente</p>
+                </div>
+                <div class="issue">
+                    <h4 class="issueTitle">Un boton no funciona</h4>
+                    <p class="issueDescript">Los botones que se encuentren mas oscuros o grises estan deshabilitados por el momento. Próximamente estaran disponibles.</p>
+                </div>
+                <div class="issue">
+                    <h4 class="issueTitle">Contacto</h4>
+                    <p class="issueDescript">Si el problema al que te enfrentas no esta en esta lista, puedes enviar un email para recibir asistencia o simplemente reportar el inconveniente.</p>
+                </div>
             </div>
         </div>
         <div id="table">
@@ -95,8 +220,8 @@
                     <div id="basto4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto4.png);"></div>
                     <div id="basto5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto5.png);"></div>
                     <div id="basto6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto6.png);"></div>
-                    <div id="ba7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto7.png);"></div>
-                    <div id="basstoto8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto8.png);"></div>
+                    <div id="basto7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto7.png);"></div>
+                    <div id="basto8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto8.png);"></div>
                     <div id="basto9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto9.png);"></div>
                     <div id="basto10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto10.png);"></div>
                     <div id="basto11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto11.png);"></div>
@@ -114,11 +239,12 @@
                     <div id="copa11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa11.png);"></div>
                     <div id="copa12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa12.png);"></div>
                 </div>
-                <div id="waste"></div>
+                <div id="waste">
+                    <button id="rebootOverlay" style="display:  none;">↺</button>
+                </div>
             </div>
         </div>
         <button id="userDrawButton"></button>
-        <button id="rebootOverlay" style="display: none">↺</button>
     </main>
 </body>
 <footer id="allFooter">
@@ -134,7 +260,7 @@
         <div class="footerBoxes">
             <div class="buttonContainer">
                 <a class="btn" href="mailto:juan.riondini@gmail.com">Contacto</a>
-                <!--a class="btn" href="https://forms.gle/67McXcnE57ZMZUQGA" target="_blank">Reportar errores!</a-->
+                <a class="btn" href="https://forms.gle/67McXcnE57ZMZUQGA" target="_blank">Reportar errores!</a>
             </div>
         </div>
     </div>

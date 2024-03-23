@@ -1,0 +1,20 @@
+.optionAvatar{
+    width: 100%;
+    min-width: 60px;
+    max-width: 100px;
+    aspect-ratio: 1/1;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    margin: auto;
+    border: solid 0.1rem goldenrod;
+    background-color: #fff;
+    cursor: pointer;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+.optionAvatar:hover {
+    filter: brightness(1.2); /* Aumenta el brillo en hover */
+}

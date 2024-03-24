@@ -26,18 +26,23 @@
     margin: auto;
 }
 .metricas{
+    width: 90%;
     height: 80%;
     aspect-ratio: 1/1;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
     align-items: center;
+    overflow-y: scroll;
     justify-content: space-between;
     margin: auto;
     max-height: auto;
     gap: 5px;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-right: 5px;
     scroll-behavior: smooth;
     scroll-snap-type: proximity;
 

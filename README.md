@@ -1,4 +1,8 @@
 =================================================
+## v1.1.3 open_betta_v1.1.3_RC2-build#4(23032024)
+
+-[Rollback] Deshechos algunos cambios visuales del area de estadisticas
+=================================================
 ## v1.1.3 open_betta_v1.1.3_RC2-build#3(23032024)
 
 -[Bugfix] Correccion de superposiciones visual de los elementos principales en dispositivos moviles.

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es-AR">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -50,7 +51,7 @@
             </div>
         </div>
     </div>
-    <section id="gameDataSection">
+    <div id="gameDataSection">
         <div class="gameDataContainer">
             <div class="playerContainer">
                 <span id="avatarPlayer0" class="avatar"></span>
@@ -68,9 +69,11 @@
                 <span id="playerPoints" class="points">0</span><h4 class="pointsStyle">Puntos</h4>
             </div>
         </div>
-    </section>
-    <main id="gameArea">
+    </div>
+    <div class="menuToggleContainer">
         <button id="menuToggle">|||</button>
+    </div>
+    <main id="gameArea">
         <div id="mainMenu" class="menuContainer" style="display: none">
             <button class="closeBtn" id="close" onclick="close()">Cerrar ✕</button>
             <div class="btnContainer">
@@ -158,93 +161,91 @@
             </div>
         </div>
         <div id="helpBox" class="menuContainer" style="display:  none;">
-            <button class="closeBtn" id="backToSettings"  onclick="backToSettings()">← Volver</button>
-            <div id="helpContainer" class="submenuContainer">
-                <h3 class="helpTitle">Ayuda</h3>
-                <div class="issue">
-                    <h4 class="issueTitle">Las imagenes no se ven correctamente</h4>
-                    <p class="issueDescript">Si tienes problemas con la visualizacion de las imagenes del juego, podemos intentar solucionarlo. Ve a "Ajustes → Borrar puntaje". Esto eliminara los datos almacenados en caché del juego. Ten en cuenta que tus puntajes tambien seran eliminados. Si esto no lo soluciona, puedes intentar eliminando el caché del navegador que ejecuta el juego. Si nada de esto funciona, puedes contactarme por email.</p>
+                <button class="closeBtn" id="backToSettings"  onclick="backToSettings()">← Volver</button>
+                <div id="helpContainer" class="submenuContainer">
+                    <h3 class="helpTitle">Ayuda</h3>
+                    <div class="issue">
+                        <h4 class="issueTitle">Las imagenes no se ven correctamente</h4>
+                        <p class="issueDescript">Si tienes problemas con la visualizacion de las imagenes del juego, podemos intentar solucionarlo. Ve a "Ajustes → Borrar puntaje". Esto eliminara los datos almacenados en caché del juego. Ten en cuenta que tus puntajes tambien seran eliminados. Si esto no lo soluciona, puedes intentar eliminando el caché del navegador que ejecuta el juego. Si nada de esto funciona, puedes contactarme por email.</p>
+                    </div>
+                    <div class="issue">
+                        <h4 class="issueTitle">La partida no incia</h4>
+                        <p class="issueDescript">Por el momento, solo es posible enfrentarse a Rookie. El tomará automaticamente una carta cada vez que sea su turno. Si esto no sucede, refresca el navegador. El alternador de turnos pondra un borde verde parpadeante señalizando cuando es el turno de cada jugador.</p>
+                    </div>
+                    <div class="issue">
+                        <h4 class="issueTitle">Visualizacion</h4>
+                        <p class="issueDescript">El juego deberia adapatarse automáticamente a cada dispositivo. Si esto no ocurriera, el tamaño minimo de ancho de pantalla es de (300 x 600)px. Es aconsejable jugarlo en dispositivos que al menos cumplan este requisito.</p>
+                    </div>
+                    <div class="issue">
+                        <h4 class="issueTitle">Rendimiento</h4>
+                        <p class="issueDescript">Si bien es realizado un test de rendimiento antes de actualizar cada version, si el juego funciona lento en tu dispositivo puede deberse a la velocidad de conexion o memoria ram disponible. Dependiendo del navegador que utilices, variará la cantidad de ram minima. Tambien podes reportar el error o el inconveniente</p>
+                    </div>
+                    <div class="issue">
+                        <h4 class="issueTitle">Un boton no funciona</h4>
+                        <p class="issueDescript">Los botones que se encuentren mas oscuros o grises estan deshabilitados por el momento. Próximamente estaran disponibles.</p>
+                    </div>
+                    <div class="issue">
+                        <h4 class="issueTitle">Contacto</h4>
+                        <p class="issueDescript">Si el problema al que te enfrentas no esta en esta lista, puedes enviar un email para recibir asistencia o simplemente reportar el inconveniente.</p>
+                    </div>
                 </div>
-                <div class="issue">
-                    <h4 class="issueTitle">La partida no incia</h4>
-                    <p class="issueDescript">Por el momento, solo es posible enfrentarse a Rookie. El tomará automaticamente una carta cada vez que sea su turno. Si esto no sucede, refresca el navegador. El alternador de turnos pondra un borde verde parpadeante señalizando cuando es el turno de cada jugador.</p>
-                </div>
-                <div class="issue">
-                    <h4 class="issueTitle">Visualizacion</h4>
-                    <p class="issueDescript">El juego deberia adapatarse automáticamente a cada dispositivo. Si esto no ocurriera, el tamaño minimo de ancho de pantalla es de (300 x 600)px. Es aconsejable jugarlo en dispositivos que al menos cumplan este requisito.</p>
-                </div>
-                <div class="issue">
-                    <h4 class="issueTitle">Rendimiento</h4>
-                    <p class="issueDescript">Si bien es realizado un test de rendimiento antes de actualizar cada version, si el juego funciona lento en tu dispositivo puede deberse a la velocidad de conexion o memoria ram disponible. Dependiendo del navegador que utilices, variará la cantidad de ram minima. Tambien podes reportar el error o el inconveniente</p>
-                </div>
-                <div class="issue">
-                    <h4 class="issueTitle">Un boton no funciona</h4>
-                    <p class="issueDescript">Los botones que se encuentren mas oscuros o grises estan deshabilitados por el momento. Próximamente estaran disponibles.</p>
-                </div>
-                <div class="issue">
-                    <h4 class="issueTitle">Contacto</h4>
-                    <p class="issueDescript">Si el problema al que te enfrentas no esta en esta lista, puedes enviar un email para recibir asistencia o simplemente reportar el inconveniente.</p>
-                </div>
-            </div>
+        </div>
+        <div id="mazo" style="display: none;">
+            <div id="oro1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro1.png);"></div>
+            <div id="oro2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro2.png);"></div>
+            <div id="oro3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro3.png);"></div>
+            <div id="oro4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro4.png);"></div>
+            <div id="oro5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro5.png);"></div>
+            <div id="oro6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro6.png);"></div>
+            <div id="oro7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro7.png);"></div>
+            <div id="oro8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro8.png);"></div>
+            <div id="oro9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro9.png);"></div>
+            <div id="oro10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro10.png);"></div>
+            <div id="oro11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro12.png);"></div>
+            <div id="oro12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto1.png);"></div>
+            <div id="espada1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada1.png);"></div>
+            <div id="espada2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada2.png);"></div>
+            <div id="espada3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada3.png);"></div>
+            <div id="espada4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada4.png);"></div>
+            <div id="espada5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada5.png);"></div>
+            <div id="espada6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada6.png);"></div>
+            <div id="espada7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada7.png);"></div>
+            <div id="espada8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada8.png);"></div>
+            <div id="espada9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada9.png);"></div>
+            <div id="espada10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada10.png);"></div>
+            <div id="espada11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada11.png);"></div>
+            <div id="espada12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada12.png);"></div>
+            <div id="basto1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto1.png);"></div>
+            <div id="basto2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto2.png);"></div>
+            <div id="basto3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto3.png);"></div>
+            <div id="basto4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto4.png);"></div>
+            <div id="basto5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto5.png);"></div>
+            <div id="basto6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto6.png);"></div>
+            <div id="basto7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto7.png);"></div>
+            <div id="basto8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto8.png);"></div>
+            <div id="basto9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto9.png);"></div>
+            <div id="basto10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto10.png);"></div>
+            <div id="basto11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto11.png);"></div>
+            <div id="basto12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto12.png);"></div>
+            <div id="copa1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa1.png);"></div>
+            <div id="copa2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa2.png);"></div>
+            <div id="copa3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa3.png);"></div>
+            <div id="copa4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa4.png);"></div>
+            <div id="copa5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa5.png);"></div>
+            <div id="copa6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa6.png);"></div>
+            <div id="copa7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa7.png);"></div>
+            <div id="copa8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa8.png);"></div>
+            <div id="copa9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa9.png);"></div>
+            <div id="copa10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa10.png);"></div>
+            <div id="copa11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa11.png);"></div>
+            <div id="copa12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa12.png);"></div>
         </div>
         <div id="table">
-            <div class="mazosContainer">
-                <div id="mazo">
-                    <div id="oro1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro1.png);"></div>
-                    <div id="oro2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro2.png);"></div>
-                    <div id="oro3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro3.png);"></div>
-                    <div id="oro4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro4.png);"></div>
-                    <div id="oro5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro5.png);"></div>
-                    <div id="oro6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro6.png);"></div>
-                    <div id="oro7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro7.png);"></div>
-                    <div id="oro8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro8.png);"></div>
-                    <div id="oro9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro9.png);"></div>
-                    <div id="oro10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro10.png);"></div>
-                    <div id="oro11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Oro/oro12.png);"></div>
-                    <div id="oro12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto1.png);"></div>
-                    <div id="espada1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada1.png);"></div>
-                    <div id="espada2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada2.png);"></div>
-                    <div id="espada3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada3.png);"></div>
-                    <div id="espada4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada4.png);"></div>
-                    <div id="espada5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada5.png);"></div>
-                    <div id="espada6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada6.png);"></div>
-                    <div id="espada7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada7.png);"></div>
-                    <div id="espada8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada8.png);"></div>
-                    <div id="espada9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada9.png);"></div>
-                    <div id="espada10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada10.png);"></div>
-                    <div id="espada11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada11.png);"></div>
-                    <div id="espada12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Espada/espada12.png);"></div>
-                    <div id="basto1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto1.png);"></div>
-                    <div id="basto2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto2.png);"></div>
-                    <div id="basto3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto3.png);"></div>
-                    <div id="basto4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto4.png);"></div>
-                    <div id="basto5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto5.png);"></div>
-                    <div id="basto6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto6.png);"></div>
-                    <div id="basto7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto7.png);"></div>
-                    <div id="basto8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto8.png);"></div>
-                    <div id="basto9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto9.png);"></div>
-                    <div id="basto10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto10.png);"></div>
-                    <div id="basto11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto11.png);"></div>
-                    <div id="basto12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Basto/basto12.png);"></div>
-                    <div id="copa1" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa1.png);"></div>
-                    <div id="copa2" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa2.png);"></div>
-                    <div id="copa3" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa3.png);"></div>
-                    <div id="copa4" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa4.png);"></div>
-                    <div id="copa5" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa5.png);"></div>
-                    <div id="copa6" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa6.png);"></div>
-                    <div id="copa7" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa7.png);"></div>
-                    <div id="copa8" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa8.png);"></div>
-                    <div id="copa9" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa9.png);"></div>
-                    <div id="copa10" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa10.png);"></div>
-                    <div id="copa11" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa11.png);"></div>
-                    <div id="copa12" class="card" style="background-image:  url(./Resources/Mazo/Españolas/Copa/copa12.png);"></div>
-                </div>
-                <div id="waste">
-                    <button id="rebootOverlay" style="display:  none;">↺</button>
-                </div>
+            <div class="ubicarMazos">
+                <button id="userDrawButton"></button> 
+                <div id="waste"><button id="rebootOverlay" style="display:  none;">↺</button></div>
             </div>
         </div>
-        <button id="userDrawButton"></button>
     </main>
 </body>
 <footer id="allFooter">

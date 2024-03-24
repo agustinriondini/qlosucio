@@ -14,31 +14,35 @@
     animation: parpadeo 1s infinite;
     border: 5px solid transparent;
 }
-.playerContainer{
-    width: 50%;
-    min-width: fit-content;
+.playerContainer{/*su container esta unicado en gameCenter*/
+    width: 40%;
+    min-width: 140px;
+    max-width: 400px;
     height: 100%;
+    min-height: 100px;
     max-height: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: auto;
+    align-items: center;
 }
 .avatar{
-    width: 20%;
-    min-width: 20px;
+    height: 80%;
+    min-height: 80px;
     aspect-ratio: 1/1;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+    border: none;
+    border-radius: 50%;
 }
 #avatarPlayer0{
     background-image: url("../Images/Pics/cpu.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
 }
 #avatarPlayer1{
     background-image: url("../Images/Pics/touch.jpg");
@@ -47,29 +51,21 @@
     background-repeat: no-repeat;
     cursor: pointer;
     background-color: #fff;
+    display: flex;
 }
 .player{
-    font-size: 1rem;
-    text-transform: capitalize;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
+    height: 20%;
     color: #fff;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
+
 }
 .player:hover{
-    background-color: #fff;
+    cursor:text;
+    background-color: rgba(255, 255, 255, 0.3);
     color: black;
-}
-/*Solucion a la superposicion en pantallas pequeñas*/
-@media only screen and (max-width: 600px) {
-    .playerContainer{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        min-height: fit-content;
-    }
-    .avatar{
-        max-width: 20px;
-        aspect-ratio: 1/1;
-    }
 }

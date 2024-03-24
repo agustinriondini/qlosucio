@@ -1,37 +1,33 @@
 /*Al presionar boton-menu hamburguesa*/
+.menuToggleContainer{
+    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
+    height: 5%;
+    min-height: 20px;
+    display: flex;
+    margin: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
 #menuToggle{
     display: flex;
-    position: absolute;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin: auto;
-    left: 10%;
-    top: 20%;
-    width: 2.5%;
-    min-width: 32px;
-    max-width: 80px;
+    height: 90%;
     aspect-ratio: 1/1;
     rotate: 90deg;
-    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: solid 0.1rem #fff;
+    margin: auto 0;
     color: #fff;
-    font-weight: bolder;
     transition: background-color 0.3s ease;
 }
 #menuToggle:hover{
     background-color: rgba(255, 194, 39, 0.5);
+    cursor: pointer;
+}
 
-}
-@media only screen and (max-width: 400px){
-    #menuToggle{
-
-    }
-}
-@media only screen and (min-width: 768px) {
-    #menuToggle{
-        left: 20%;
-    }
-}

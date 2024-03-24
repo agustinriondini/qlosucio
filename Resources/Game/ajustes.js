@@ -65,6 +65,7 @@ function mostrarMesas() {
 function pushBackground(element) {
     var mesaURL = element.src;
     document.getElementById("body").style.backgroundImage = "url('" + mesaURL + "')";
+
 }
 //cambiar el dorso del mazo
 function cambiarDorso() {

@@ -1,4 +1,13 @@
 =================================================
+## v1.1.4 open_betta_v1.1.4_RC2-build#5(24032024)
+
+-[Rollback] Deshechos todos los cambios visuales de la version open_betta_v1.1.3_RC2-build#4(23032024).
+-[Deleted] Eliminadas todas las soluciones con media-query. (testing)
+-[Bugfix] Parche visual para corregir errores de diiseño. (testing)
+-[Rebuild] Rediseñado el index.html para solucionar limites del diseño que afectaban a la UI
+-[Update] Actualizada la version
+-[Update] Actualizado el readme.md
+=================================================
 ## v1.1.3 open_betta_v1.1.3_RC2-build#4(23032024)
 
 -[Rollback] Deshechos algunos cambios visuales del area de estadisticas

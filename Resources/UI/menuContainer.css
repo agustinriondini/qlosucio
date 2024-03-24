@@ -1,4 +1,14 @@
 /*menu container general*/
+.overGameSurface{
+    background-color: aqua;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+}
 .menuContainer{
     width: 60%;
     min-width: 300px;
@@ -8,7 +18,7 @@
     backdrop-filter: blur(10px);
     display: none;/*---------------------------->cambiar a none*/
     position: absolute;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: auto;

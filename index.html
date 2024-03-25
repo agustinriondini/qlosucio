@@ -55,18 +55,22 @@
         <div class="gameDataContainer">
             <div class="playerContainer">
                 <span id="avatarPlayer0" class="avatar"></span>
-                <select name="selectorDificultad" id="oponente" required>
-                    <option value="vsCpu" selected>VS Rookie</option>
-                    <option value="allIn" hidden>Local versus</option>
-                    <option value="online" hidden>En linea</option>
-                </select>
-                <span id="machinePoints" class="points">0</span>
-                <h4 class="pointsStyle">Puntos</h4>
+                <div class="playerData">
+                    <select name="selectorDificultad" id="oponente" required>
+                        <option value="vsCpu" selected>VS Rookie</option>
+                        <option value="allIn" hidden>Local versus</option>
+                        <option value="online" hidden>En linea</option>
+                    </select>
+                    <span id="machinePoints" class="points">0</span>
+                    <h4 class="pointsStyle">Puntos</h4>
+                </div>
             </div>
             <div class="playerContainer">
                 <span id="avatarPlayer1" class="avatar" onclick="mostrarAvatars()"></span>
-                <span id="player1"class="player" onclick="editarNombreJugador()">haz click aqui</span>
-                <span id="playerPoints" class="points">0</span><h4 class="pointsStyle">Puntos</h4>
+                <div class="playerData">
+                    <span id="player1"class="player" onclick="editarNombreJugador()">haz click aqui</span>
+                    <span id="playerPoints" class="points">0</span><h4 class="pointsStyle">Puntos</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -102,12 +106,12 @@
                 <button class="closeBtn" id="backToSettings" onclick="backToSettings()">← Volver</button>
                 <button class="closeBtn" id="close" onclick="closeAll()">Cerrar ✕</button>
             </div>
+            <div id="metricasUsuario">
+                <span id="avatarPlayer1Estadisticas" class="avatar-estadistica"></span>
+                <span id="player1Estadisticas" class="user-estadistica">***</span>
+                <span id="playerPointsEstadisticas" class="user-estadistica">***</span>
+            </div>
             <div class="metricas">
-                <div id="metricasUsuario">
-                    <span id="avatarPlayer1Estadisticas" class="avatar-estadistica"></span>
-                    <span id="player1Estadisticas" class="user-estadistica">***</span>
-                    <span id="playerPointsEstadisticas" class="user-estadistica">***</span>
-                </div>
                 <div id="resultados-estadisticas">
                     <div class="indice-metrico">
                         <h5 class="title-metricas">Nivel de suciedad:</h5>

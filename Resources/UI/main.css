@@ -42,7 +42,7 @@
     background-repeat: round;
     background-position: center;
     width: 20%;
-    min-width: 100px;
+    min-width: 150px;
     max-width: 200px;
     aspect-ratio: 1/1.5;
     display: flex;
@@ -58,7 +58,7 @@
 }
 #waste{
         width: 20%;
-        min-width: 100px;
+        min-width: 150px;
         max-width: 200px;
         aspect-ratio: 1/1.5;
         display: flex;
@@ -70,7 +70,7 @@
 }
 .card{
     width: 20%;
-    min-width: 100px;
+    min-width: 150px;
     max-width: 200px;
     aspect-ratio: 1/1.5;
     display: flex;
@@ -114,4 +114,15 @@
 #rebootOverlay:active{
     opacity: 100%;
     cursor: progress;
+}
+@media (max-width: 768px) {
+    #userDrawButton{
+        left: 10%;
+    }
+    #waste{
+        left: 80%;
+    }
+    .card{
+        left: 60%;
+    }
 }

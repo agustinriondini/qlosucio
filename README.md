@@ -1,4 +1,14 @@
 =================================================
+## v1.1.5 open_betta_v1.1.5_RC2-build#6(25032024)
+
+-[Bugfix] Solucionada la superposicion visual de algunos elementos en dispositivos moviles de los mazos de cartas y del area de estadisticas.
+-[Fix] Se incremento el tamaño minimo de las cartas y se reposicionaron.
+-[Fix] Se mejoro la visualizacion y ubicacion de los elementos del gamecenter
+-[Fix] Se mejoro la transparencia de los botones del menu.
+-[Fix] Se corrigio falla en la visualizacion del indicador de turnos- ya no altera el comportamiento de otros elementos.
+-[Update] Version
+-[Update] Readme.md
+=================================================
 ## v1.1.4 open_betta_v1.1.4_RC2-build#5(24032024)
 
 -[Rollback] Deshechos todos los cambios visuales de la version open_betta_v1.1.3_RC2-build#4(23032024).

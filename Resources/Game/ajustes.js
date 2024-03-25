@@ -92,8 +92,8 @@ function tyc() {
 }
 //Boton Mi puntaje
 function estadisticas(){
-   document.getElementById("estadisticas").style.display = "flex";
-   document.getElementById("ajustes").style.display = "none";
+    document.getElementById("estadisticas").style.display = "flex";
+    document.getElementById("ajustes").style.display = "none";
 
 }
 //funcion de cierre especifica del area de estadisticas

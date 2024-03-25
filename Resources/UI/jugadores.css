@@ -20,22 +20,33 @@
     max-width: 400px;
     height: 100%;
     min-height: 100px;
-    max-height: 300px;
+    max-height: 200px;
     display: flex;
     justify-content: center;
     margin: auto;
     align-items: center;
 }
+.playerData{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 50%;
+}
 .avatar{
     height: 80%;
-    min-height: 80px;
+    min-height: 60px;
+    max-height: 80px;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: none;
+    border: 5px solid transparent;
     border-radius: 50%;
+    
 }
 #avatarPlayer0{
     background-image: url("../Images/Pics/cpu.jpg");

@@ -1,14 +1,15 @@
 $(document).ready(function() {
-    console.log('Script cargado correctamente.');
 
     var actualver = $('#updateVer').text();
-    var lastUpdate = "open_betta_v1.1.4_RC2-build#5(24032024)";
-
-    console.log('Valor actual:', actualver);
+    var checkChannel = $('#channel').text();
+    var lastUpdate = "v1.2.1 build#6(27062024)";
+    var releaseChannel = "Testing";
 
     if (actualver !== lastUpdate) {
         $('#updateVer').text(lastUpdate);
-        console.log('Valor actualizado a:', lastUpdate);
+    }
+    if (checkChannel !== releaseChannel){
+        $('#channel').text(releaseChannel);
     }
 });
 

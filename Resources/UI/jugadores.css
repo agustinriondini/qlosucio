@@ -36,7 +36,7 @@
     width: 50%;
 }
 .avatar{
-    height: 80%;
+    height: 70%;
     min-height: 60px;
     max-height: 80px;
     aspect-ratio: 1/1;
@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: 5px solid transparent;
+    border: 5px solid rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     
 }
@@ -56,7 +56,7 @@
     display: flex;
 }
 #avatarPlayer1{
-    background-image: url("../Images/Pics/touch.jpg");
+    background-image: url("../Images/Pics/user.png");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,6 +77,6 @@
 }
 .player:hover{
     cursor:text;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     color: black;
 }

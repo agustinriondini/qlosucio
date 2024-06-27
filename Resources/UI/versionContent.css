@@ -15,7 +15,8 @@
     display: flex;
     margin: auto;
     height: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
     color: #fff;
 }
 .jarsoft{
@@ -24,4 +25,7 @@
     font-size: 1rem;
     color: #fff;
     font-style: italic;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }

@@ -6,6 +6,7 @@ function showAjustes() {
 function backToMainMenu() {
     document.getElementById("mainMenu").style.display = "flex";
     document.getElementById("ajustes").style.display = "none";
+    document.getElementById("aboutGame").style.display = "none";
 }
 // vuelve al menu dentro de ajustes
 function backToSettings() {
@@ -13,6 +14,7 @@ function backToSettings() {
     document.getElementById("dorsosBox").style.display = "none";
     document.getElementById("mesasBox").style.display = "none";
     document.getElementById("helpBox").style.display = "none"
+    document.getElementById("changeMazo").style.display = "none"
     document.getElementById("estadisticas").style.display = "none";
     document.getElementById("ajustes").style.display = "flex"; 
 }
@@ -78,6 +80,11 @@ function pushDorso(element) {
     document.getElementById("userDrawButton").style.backgroundImage = "url('" + dorsoURL + "')";
 
 }
+function cambiarMazo(){
+    document.getElementById("changeMazo").style.display = "flex";
+    document.getElementById("ajustes").style.display = "none";
+}
+
 //Boton ayuda menu
 function helpme(){
     document.getElementById("helpBox").style.display = "flex";
@@ -100,4 +107,65 @@ function estadisticas(){
 function closeAll(){
     document.getElementById("estadisticas").style.display = "none";
     document.getElementById("menuToggle").style.display = "flex";
+}
+function openAhorcado(){
+    window.location.href = 'https://agustinriondini.github.io/Ahorcado/'; 
+}
+function newGameIntro() {
+    document.getElementById("aboutGame").style.display = "flex";
+    document.getElementById("mainMenu").style.display = "none";
+    fetch('Resources/JarSoft/qlosucio.txt')
+        .then(response => response.text())
+        .then(text => {
+            var gameInfoElement = document.getElementById("qlosucioGameInfo");
+            gameInfoElement.innerHTML = text;
+        })
+        .catch(error => {
+            console.error('Error 101! No se puede cargar la información solicitada', error);
+        });
+}
+function newRules() {
+    document.getElementById("aboutGame").style.display = "flex";
+    document.getElementById("mainMenu").style.display = "none";
+    fetch('Resources/JarSoft/reglas.txt')
+        .then(response => response.text())
+        .then(text => {
+            var gameInfoElement = document.getElementById("qlosucioGameInfo");
+            gameInfoElement.innerHTML = text;
+        })
+        .catch(error => {
+            console.error('Error 101! No se puede cargar la información solicitada', error);
+        });
+}
+function displayChanges() {
+    document.getElementById("changelog").style.display = "flex";
+    fetch('Resources/JarSoft/changelog.txt')
+        .then(response => response.text())
+        .then(text => {
+            var gameInfoElement = document.getElementById("changelogData");
+            gameInfoElement.innerHTML = text;
+        })
+        .catch(error => {
+            console.error('Error 101! No se puede cargar la información solicitada', error);
+        });
+}
+function closechangelog(){
+    document.getElementById("changelog").style.display = "none";    
+}
+//botones meta
+
+function redirectFb(){
+    window.open('https://www.facebook.com/agustin.riondini.94', '_blank');
+}
+
+function redirectInsta(){
+    window.open('https://www.instagram.com/agustinriondini/', '_blank');
+}
+
+function redirectGh(){
+    window.open('https://github.com/agustinriondini', '_blank');
+}
+
+function redirectLin(){
+    window.open('https://www.linkedin.com/in/juan-agustin-riondini-2226a6195/', '_blank');
 }

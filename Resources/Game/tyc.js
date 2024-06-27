@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var tycAccepted = localStorage.getItem("tycAccepted") === "true";
     if (!tycAccepted) {
       popup.style.display = "flex";
+      document.getElementById("body").style.overflow = "hidden";
     }
     acceptCheckbox.addEventListener("change", function() {
       acceptButton.disabled = !acceptCheckbox.checked;
@@ -21,10 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
         acceptButton.classList.remove("disabled");
       } else {
         acceptButton.classList.add("disabled");
+        document.getElementById("body").style.overflow = "auto";
       }
     });
     window.guardarEstadoJuego = function() {
       localStorage.setItem("tycAccepted", acceptCheckbox.checked);
+      location.reload();
     };
     window.closePopup = function() {
       if (acceptCheckbox.checked) {

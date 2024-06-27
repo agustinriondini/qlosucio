@@ -1,0 +1,98 @@
+========================================<br><br>
+v1.2.1build#6(27062024)<br><br>
+La version 1.2.1 contiene mejoras en el codigo fuente del juego y actualizaciones generales.<br><br>
+IMPORTANTE: Mazo de cartas de poker provisorio. Mazo final en desarrollo para mejorar la calidad de imagen.<br><br>
+-[New] Nuevo registro de cambios.<br>
+-[New] Nuevo boton para jugar al ahorcado.<br>
+-[New] Nuevas caracteristicas en el menu de ajustes.<br>
+-[New] Nuevos dorsos de cartas de poker.<br>
+-[New] Nuevas mesas de juego.<br>
+-[New] Neva notificacion al finalizar la partida y reiniciarla.<br>
+-[New] Nevas funcionalidades del menu de ajustes.<br>
+-[New] Nueva funcionalidad. Seleccion de estilo de mazos (barajas) entre Poker y Españolas.<br>
+-[Fix_UI] Correcciones generales de la visualizacion del juego.<br>
+-[Update] Actualizado el contenido general.<br>
+-[Update] Actualizados los archivos txt del Jarsoft (instrucciones, juego, changelog, tyc)<br>
+-[Update] Actualizada la interfaz visual.<br>
+-[Update] Actualizado el contenido de Jarsoft.<br>
+-[Update] Actualizada la version del juego.<br>
+-[Update] Reedicion del readme.md.<br>
+-[Update] Mejorada la clasificacion del jugador.<br>
+-[Change] Se cambiaron los puntos por partidas. Suman victorias.<br>
+-[Change] Area de estadisticas 100% funcional.<br>
+-[Change] Se indica el canal de actualizaciones del juego en la barra de Jarsoft.<br>
+-[Deleted] Reemplazo de las imagenes de avatars ppresetes hasta la version 1.1.5<br>
+-[Deleted] Se eliminaron o reemplazaron imagenes del juego.<br>
+-[Deleted] Se elimina canal de pruebas.(open betta) y las RC (release candidate)-<br>
+-[Bugfix_UI]Se corrigio el fallo visual de los terminos y condiciones.<br>
+
+========================================<br><br>
+v1.1.5build#6(25032024)<br><br>
+-[Bugfix_UI] Solucion a superposiciones visuales en dispositivos moviles.<br>
+-[Fix_UI] Mejora visual de las cartas de juego.<br>
+-[Fix_UI] Mejora visual del gamecenter.<br>
+-[Fix_UI] Mejora visual del menu.<br>
+-[Bugfix_UI] Solucion al mal comportamiento visual del indicador de turno.<br>
+-[Update] Version.<br>
+-[Update] Readme.md.<br>
+
+========================================<br><br>
+v1.1.4build#5(24032024)<br><br>
+
+-[Rollback] Reversion de los ultimos cambios visuales por errores de visualizacion.<br>
+-[Deleted] Eliminadas todas las soluciones con media-query. (testing).<br>
+-[Bugfix] Parche visual para corregir errores de diseño. (testing).<br>
+-[Rebuild] Rediseño del index.<br>
+-[Update] Actualizada la version.<br>
+-[Update] Actualizado el readme.md.<br>
+========================================<br><br>
+v1.1.3build#4(23032024)<br><br>
+
+-[Rollback] Reversion de cambios en estadisticas por error de implementacion.<br>
+========================================<br><br>
+v1.1.3build#3(23032024)<br><br>
+
+-[Bugfix] Correccion de superposiciones visual en dispositivos moviles.<br>
+-[Update] Version actulalizada.<br>
+-[Update] Cambios registrados en el readme.md.<br>
+========================================<br><br>
+v1.1.2build#2(23032024)<br><br>
+Incluye correcciones y nuevas funcionalidades<br><br>
+
+-[Bugfix] Corregido el error donde no se computaban los puntos del usuario.<br>
+-[Bugfix] Correcciones de diseño en dispositivos moviles.<br>
+-[Bugfix] Correccion de la ubicacion del menuToggle en dispositivos con mas de 700px de ancho.<br>
+-[Bugfix] Correccion de la visualizacion y comportamiento del footer.<br>
+-[Fix] Se elimino icono de emoticon dentro de la imagen del avatar.<br>
+-[Fix] Corregida la visualizacion del menu.<br>
+-[Fix] Reorganizacion de estilos css para mejorar lectura y comprension de los mismos.<br>
+-[Fix] Habilitado el  formulario para reporte de errores. <br>
+-[New] Se agrego un menu de ajustes.<br>
+-[New] Se agrego "como jugar" en el menu principal.<br>
+-[New] Icono en pestaña.<br>
+-[New] Dorso del mazo de cartas españolas por defecto.<br>
+-[New] Se agregaron nuevos dorsos para personalizar el mazo.<br>
+-[New] Ahora se puede cambiar de avatar haciendo click desde la imagen por defecto del avatar directamente.<br>
+-[New] Se puede cambiar el nombre del jugador haciendo click en "Ingresa un nombre" directamente desde el banner principal.<br>
+-[New] Terminos y condiciones del juego. Deben ser aceptados para poder jugar.<br>
+-[New] Se puede cambiar la imagen del avatar entre otras predeterminadas.<br>
+-[New] Se agregaron nuevas mesas.<br>
+-[New] Estadisticas. Mide tu suerte en el juego.<br>
+-[Changes] Modificacion de los mensajes de alerta del juego y reubicacion de algunos botones del menu.<br>
+-[Changes] Modificacion del estado por defecto en el gamecenter.<br>
+-[Reloaded] Mejoradas las imagenes del mazo de cartas Españolas.<br>
+-[Update] Version actualizada a la v1.1.2.<br>
+-[Update] Readme.md.<br>
+
+========================================<br><br>
+# qlosucio open_betta_v1.0.0_RC-build#1(16032024)<br><br>
+
+Recreacion virtual de juego de cartas infantil<br>
+
+Quien saque el uno de oro pierde. Cartas españolas.<br>
+-[Region]Argentina<br>
+
+Nomenclatura:<br><br>
+1.X.X (1)Indica version del juego.<br>
+X.1.X (1)Indica version del codigo o logica.<br>
+X.X.1 (1)Indica correcciones o actualizaciones.<br>

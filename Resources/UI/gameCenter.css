@@ -21,9 +21,9 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    box-shadow: inset 0px 0px 10px #fff;
+    box-shadow: inset 0px 0px 10px black;
 }
 .gameDataContainer{
     width: 100%;
@@ -55,6 +55,6 @@
     color: #fff;
     font-weight: bolder;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 

@@ -1,14 +1,14 @@
 #body{
-    width: 100vw;
+    width: 100dvw;
     min-width: 300px;
     max-width: 3000px;
-    height: 100vh;
-    min-height: fit-content;
-    max-height: 2190px;
-    background-image: url(../Images/Table/mesa_madera.jpg);
+    height: 100dvh;
+    max-height: 1080px;
+    background-image: url(../Images/Table/mesa_madera_alternativa.jpg);
     background-size: cover;
     background-position: center;
     margin: auto;
+    overflow: auto;
 }
 #table{
     width: 80%;
@@ -41,37 +41,41 @@
     background-size: contain;
     background-repeat: round;
     background-position: center;
-    width: 20%;
-    min-width: 150px;
-    max-width: 200px;
+    height: 40%;
+    min-height: 150px;
+    max-height: 200px;
     aspect-ratio: 1/1.5;
     display: flex;
     cursor: pointer;
     position: absolute;
     justify-content: center;
     align-items: center;
-    left: 25%;
+    left: 33%;
     border: solid 0.1rem black;
     border-radius: 12.5px;
     margin: auto;
     rotate: -20deg;
 }
+#userDrawButton:active{
+    opacity: 90%;
+    transition: opacity 0.3s ease;
+}
 #waste{
-        width: 20%;
-        min-width: 150px;
-        max-width: 200px;
-        aspect-ratio: 1/1.5;
-        display: flex;
-        cursor: pointer;
-        background-color: none;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
+    height: 40%;
+    min-height: 150px;
+    max-height: 200px;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    cursor: pointer;
+    background-color: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 .card{
-    width: 20%;
-    min-width: 150px;
-    max-width: 200px;
+    height: 40%;
+    min-height: 150px;
+    max-height: 200px;
     aspect-ratio: 1/1.5;
     display: flex;
     position: absolute;
@@ -80,40 +84,43 @@
     border-radius: 12.5px;
     background-position: center;
     background-size: contain;
-    right: 25%;
+    right: 33%;
     
 }
-/*Reboot button grande al finalizar juego*/
-#rebootOverlay{
-    display: none;
-    position: absolute;
-    background-color: rgba(218, 165, 32, 0.6);
-    width: 20lvw;
-    min-width: 100px;
-    max-width: 200px;
-    aspect-ratio: 1/1;
-    border: solid 0.1rem #fff;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    justify-content: center;
+#reload{
+    width: 50%;
+    min-width: 150px;
+    max-width: 600px;
+    aspect-ratio: 1/0.3;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    font-size: 200%;
-    z-index: 3;
     margin: auto;
-    box-shadow: 0px 0px 10px grey;
+    z-index: 99;
+    border: double 0.2rem white;
+}
+.reload_alert{
+    color: #fff;
+    text-align: center;
+}
+#rebootBtn{
+    height: 50%;
+    min-height: 25px;
+    max-height: 75px;
+    aspect-ratio: 1/1;
+    border: solid 0.1rem white;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    
+    background-color: rgba(0, 0, 0, 0.1);
 }
-#rebootOverlay:hover{
-    background-color: rgba(218, 165, 32, 0.8);
+#rebootBtn:hover{
+    background-color: rgba(1, 174, 249, 0.5);
     animation: rotateAnimation 2s linear infinite;
-
-}
-#rebootOverlay:active{
-    opacity: 100%;
-    cursor: progress;
 }
 @media (max-width: 768px) {
     #userDrawButton{

@@ -1,0 +1,12 @@
+Sugerencia<br><br>
+🪧Ingresa tu nombre y completa tu perfil de juego. Puedes seleccionar una imagen, que sera tu avatar. Tambien desde el menu de "Ajustes" puedes personalizar el area de juego, mesa y mazo.<br><br>
+
+Como jugar<br><br>
+1- Toca en el mazo para sacar una carta. Luego de que saques una, Rookie tendra su turno. La suerte ya esta en el aire.<br><br>
+2- Cada vez que sale el UNO DE ORO de las cartas Españolas o el Comodin en las cartas de Poker, el rival suma un punto. (1 punto).<br><br>
+3- El que mas puntos obtiene es el ganador. No hay limite de puntos.<br><br>
+
+Guardado<br><br>
+💾Tus configuraciones y datos del juego se guardaran en tu navegador por una semana. Luego seran eliminadas.<br><br>
+🧑🏻‍🔧Puedes eliminar los datos del juego de manera manual. Ve a "Ajustes" y busca "Reestablecer juego". Esto eliminara todo lo almacenado por el juego. Puede ayudarte a resolver algun inconveniente en la visualizacion del juego. <br><br>
+⚙️Si necesitas mas ayuda ve al menu de ajustes. "Ajustes" y dentro busca "Ayuda". <br><br>

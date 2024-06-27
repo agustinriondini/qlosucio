@@ -4,7 +4,11 @@ var turnoUsuario = true;
 var userDrawButton; 
 var gameStatus = false;
 document.addEventListener('DOMContentLoaded', function() {
-    userDrawButton = document.getElementById("userDrawButton"); 
+    userDrawButton = document.getElementById("userDrawButton");
+    function showAlert(){
+        var alertStatus = document.getElementById("reload");
+        alertStatus.style.display = "flex";
+    } 
     // array mazo
     function llenarMazo() {
         var mazo = document.getElementById("mazo");
@@ -41,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (cartaActual.id === "oro1") {
                 gameStatus = true;
                 alert("¡Ganaste, la Rookie tiene el Q-lo sucio!");
-                restarPuntos("machinePoints", 25);
+                sumarPuntos("playerPoints", 1);
+                showAlert();
                 reiniciarJuego();
                 return;
             }
@@ -50,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //revisar aca
-    function restarPuntos(playerId, puntos) {
+    function sumarPuntos(playerId, puntos) {
         var puntosSpan = document.getElementById(playerId);
         var puntosActuales = parseInt(puntosSpan.textContent) || 0;
-        puntosSpan.textContent = puntosActuales - puntos;
+        puntosSpan.textContent = puntosActuales + puntos;
     }
     function reiniciarJuego() {
         cartaActualIndex = 0;
@@ -78,7 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (cartaActual.id === "oro1") {
                 gameStatus = true;
                 alert("¡Perdiste!");
-                restarPuntos("playerPoints", 25);
+                sumarPuntos("machinePoints", 1);
+                showAlert();
                 reiniciarJuego();
                 userDrawButton.disabled = true;
                 return;

@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     var rebootButton = document.getElementById("play");
-    var rebootOverlay = document.getElementById("rebootOverlay");
+    var rebootBtn = document.getElementById("rebootBtn");
     rebootButton.addEventListener("click", function() {
         reiniciarJuego();
     });
-    rebootOverlay.addEventListener("click", function() {
+    rebootBtn.addEventListener("click", function() {
         reiniciarJuego();
     });
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('userDrawButton').style.background = userDrawButtonBackground;
         }
     }
-
+    
     function reiniciarJuego() {
         guardarEstadoJuego();
         location.reload();
@@ -49,9 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cargarEstadoJuego();
 
-    function mostrarBotonReinicio() {
-        rebootOverlay.style.display = "flex";
-    }
+
 
     var oro1Card = document.getElementById("oro1");
     oro1Card.addEventListener("click", mostrarBotonReinicio);

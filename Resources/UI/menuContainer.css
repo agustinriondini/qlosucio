@@ -1,6 +1,5 @@
 /*menu container general*/
 .overGameSurface{
-    background-color: aqua;
     width: 100vw;
     height: 50vh;
     display: flex;
@@ -10,13 +9,12 @@
     position: absolute;
 }
 .menuContainer{
-    width: 60%;
-    min-width: 300px;
-    max-width: 400px;
-    aspect-ratio: 1/1;
-    background-color: transparent;
+    height: 60%;
+    min-height: 270px;
+    max-height: 600px;
+    aspect-ratio: 1/1.5;
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    display: none;/*---------------------------->cambiar a none*/
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -29,9 +27,9 @@
     top: 20%;
 
 }
-.submenuContainer {
+.submenuContainer, .btnContainer, #displayChangelog {
     height: 80%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1.5;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -40,37 +38,28 @@
     margin: auto;
     max-height: auto;
     gap: 5px;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
-    scroll-snap-type: proximity;
+    scroll-snap-type: mandatory;
+}
+.submenuContainer::-webkit-scrollbar, .btnContainer::-webkit-scrollbar{
+    width: 0px;
+}
+.submenuContainer:hover, .btnContainer:hover{
+    transition: ease-in-out 0.3s;
 }
 
 /*Btones dentro del menu*/
 .closeBtn{/*closeBtn + backBtn styles*/
     width: 30%;
     min-width: 75px;
+    max-width: 100px;
     aspect-ratio: 1/0.3;
     margin: auto;
     cursor: pointer;
     border: none;
     text-align: center;
-}
-.btnContainer{
-    height: 80%;
-    aspect-ratio: 1/1;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    max-height: auto;
-    gap: 5px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-snap-type: proximity;
 }
 .menuBtn{
     width: 75%;
@@ -83,5 +72,8 @@
     transition: background-color 0.3s ease;
 }
 .menuBtn:hover, .closeBtn:hover{
-    background-color: rgba(255, 194, 39, 0.5);
+    background-color: rgba(1, 174, 249, 0.5);
+    color: #fff;
+    scale: 1.1;
+    transition: ease-in-out 0.2s;
 }

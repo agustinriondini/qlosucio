@@ -21,7 +21,7 @@
     display: flex;
     margin: auto;
     justify-content: center;
-    color: goldenrod;
+    color: rgba(1, 174, 249, 0.5);;
     font-size: 1.5rem;
     font-weight: bolder;
 }
@@ -33,7 +33,7 @@
     margin: 0.5rem auto;
 }
 .issueTitle{
-    color: goldenrod;
+    color: rgba(1, 174, 249, 0.5);;
     font-weight: bolder;
     font-size: 1.4rem;
     display: flex;

@@ -46,14 +46,14 @@ function estadisticasLocales() {
     document.getElementById("avatarPlayer1Estadisticas").style.backgroundSize = "cover";
     document.getElementById("avatarPlayer1Estadisticas").style.backgroundPosition = "center";
     document.getElementById("player1Estadisticas").textContent = nombreJugador;
-    document.getElementById("playerPointsEstadisticas").textContent = puntosJugador;
+    document.getElementById("playerPointsEstadisticas").textContent = puntosJugador + "🏆";
     
     //push nivel suciedad
     document.getElementById("nivelSuciedad").textContent = nivelSuciedad;
     //push % de victorias
     document.getElementById("perVictorias").textContent = porcentajeVictorias.toFixed(2) + "%";
     //push rondas jugadas
-    document.getElementById("totalRondas").textContent = totalPartidas;
+    document.getElementById("totalRondas").textContent = totalPartidas + "🎯";
     //push categoria
     document.getElementById("letalidad").textContent = categoria;
 

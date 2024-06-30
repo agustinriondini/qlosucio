@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             menuContainer.style.display = "flex";
             activateMenu.style.display = "none";
+            document.getElementById("changelog").style.display = "none";
         }
     }
     

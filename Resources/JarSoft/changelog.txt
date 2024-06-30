@@ -1,4 +1,18 @@
 ========================================<br><br>
+v1.2.2builld#8(30062024)<br><br>
+-[Fix] Rectificacion de numeracion de build en version "build#8".<br>
+-[Fix] Ya no se permite dejar el campo nombre vacio.<br>
+-[Fix_UI] Correcciones menores de visualizacion en dispositivos de baja resolucion.<br>
+-[Update] Mejorada la calidad de imagen del mazo de poker.<br>
+-[Update] Actualizada la version del juego.<br>
+-[Update] Cambio de canal de version de "testing" a "stable".<br>
+-[Changes] Se agrego una copa junto al numero de victorias acumuladas en la seccion "Mi puntaje" y en el Game Center.<br>
+-[Bugfix] El registro de cambios, el menu y los submenu fueron sincronizados para que no se ejecuten al mismo tiempo y no se superpongan.<br>
+-[Bugfix] Correccion de visualizacion del changelog en dispositivos moviles.<br>
+-[Bugfix] Correccion de visualizacion del pop-up de reinicio en dispositivos moviles.<br>
+-[Deleted] Eliminado el archivo "rules.js". Ya no es necesario.<br>
+
+========================================<br><br>
 v1.2.1build#6(27062024)<br><br>
 La version 1.2.1 contiene mejoras en el codigo fuente del juego y actualizaciones generales.<br><br>
 IMPORTANTE: Mazo de cartas de poker provisorio. Mazo final en desarrollo para mejorar la calidad de imagen.<br><br>

@@ -48,12 +48,11 @@
     background-position: center;
     transform: scale(0.8);
     background-color: rgba(0, 0, 0, 0.3);
-    opacity: 70%;
     border:solid 0.2rem transparent;
 }
 .socialmediaBtn:hover{
     z-index: 1;
-    opacity:100%;
+    filter: brightness(1.5);
     transform: scale(1);
     transition: ease-in 0.3s;
     border-color: rgba(255, 255, 255, 0.5);
@@ -97,6 +96,7 @@
 }
 .btn:hover{
     scale: 1.1;
+    filter: brightness(1.2);
     transition: ease-in-out 0.2s;
     background-color: rgba(1, 174, 249, 1);
 }

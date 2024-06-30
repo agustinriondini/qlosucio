@@ -48,10 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     cargarEstadoJuego();
-
-
-
-    var oro1Card = document.getElementById("oro1");
-    oro1Card.addEventListener("click", mostrarBotonReinicio);
-
 });

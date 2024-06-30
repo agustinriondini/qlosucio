@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // cuando pierde el usuario
             if (cartaActual.id === "oro1") {
                 gameStatus = true;
-                alert("¡Perdiste!");
+                alert("¡Perdiste! Que olor!");
                 sumarPuntos("machinePoints", 1);
                 showAlert();
                 reiniciarJuego();

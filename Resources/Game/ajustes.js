@@ -18,24 +18,25 @@ function backToSettings() {
     document.getElementById("estadisticas").style.display = "none";
     document.getElementById("ajustes").style.display = "flex"; 
 }
+//cierra todos los menu y submenu del juego. utilizada para el registro de cambios y evitar superposiciones visuales.
+function cleanScreen(){
+    document.getElementById("mainMenu").style.display = "none";
+    document.getElementById("ajustes").style.display = "none";
+    document.getElementById("estadisticas").style.display = "none";
+    document.getElementById("avatarsBox").style.display = "none";
+    document.getElementById("dorsosBox").style.display = "none";
+    document.getElementById("mesasBox").style.display = "none";
+    document.getElementById("helpBox").style.display = "none";
+    document.getElementById("changeMazo").style.display = "none";
+    document.getElementById("aboutGame").style.display = "none";
+    document.getElementById("menuToggle").style.display = "none";
+}
 //Reset de estadisticas
 function borrarPuntaje() {
     localStorage.clear();
     alert("Metricas reestablecidas.");
     location.reload();
 }
-//Cambiar mesa---> funcion de la betta_release_RC1-->funcion sustituta en RC2
-//function cambiarMesa() {
-//    var table = document.body;
-//    if (table.style.backgroundImage.includes("casino.jpg")) {
-//        table.style.backgroundImage = "url(./Resources/Images/Table/mesa_madera.jpg)";
-//    } else {
-//        table.style.backgroundImage = "url('./Resources/Images/Table/casino.jpg')"; // Cambia a la nueva imagen de la mesa
-//       table.style.backgroundRepeat = "round";
-//        table.style.backgroundSize = "cover";
-//        
-//    }
-//}
 //Cambiar nombre del jugador
 function editarNombreJugador() {
     var nuevoNombre = prompt("Ingrese un nombre");
@@ -43,6 +44,8 @@ function editarNombreJugador() {
         document.getElementById("player1").textContent = nuevoNombre;
     } else {
         alert("El nombre no puede estar vacio!!!");
+        //forzar nombre, no permitir campo vacio
+        return editarNombreJugador();
     }
 }
 //Cambio de avatar
@@ -138,8 +141,9 @@ function newRules() {
         });
 }
 function displayChanges() {
+    cleanScreen();
     document.getElementById("changelog").style.display = "flex";
-    fetch('Resources/JarSoft/changelog.txt')
+        fetch('Resources/JarSoft/changelog.txt')
         .then(response => response.text())
         .then(text => {
             var gameInfoElement = document.getElementById("changelogData");
@@ -150,7 +154,8 @@ function displayChanges() {
         });
 }
 function closechangelog(){
-    document.getElementById("changelog").style.display = "none";    
+    document.getElementById("changelog").style.display = "none";
+    document.getElementById("menuToggle").style.display = "flex";  
 }
 //botones meta
 

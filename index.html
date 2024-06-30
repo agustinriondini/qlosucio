@@ -36,7 +36,6 @@
     <script src="./Resources/Game/ajustes.js"></script>
     <script src="./Resources/Game/version.js"></script>
     <script src="./Resources/Game/estadisticas.js"></script>
-    <script src="./Resources/Game/rules.js"></script>
     <script src="./Resources/Game/changemazo.js"></script>
     <title>Q-lo Sucio</title>
 </head>
@@ -63,14 +62,14 @@
                         <option value="online" hidden>En linea</option>
                     </select>
                     <span id="machinePoints" class="points">0</span>
-                    <h4 class="pointsStyle">Victorias</h4>
+                    <h4 class="pointsStyle">Victorias🏆</h4>
                 </div>
             </div>
             <div class="playerContainer">
                 <span id="avatarPlayer1" class="avatar" onclick="mostrarAvatars()"></span>
                 <div class="playerData">
                     <span id="player1"class="player" onclick="editarNombreJugador()">Ingresa tu nombre</span>
-                    <span id="playerPoints" class="points">0</span><h4 class="pointsStyle">Victorias</h4>
+                    <span id="playerPoints" class="points">0</span><h4 class="pointsStyle">Victorias🏆</h4>
                 </div>
             </div>
         </div>
@@ -80,7 +79,7 @@
     </div>
     <main id="gameArea">
         <div id="mainMenu" class="menuContainer" style="display: none">
-            <button class="closeBtn" id="close" onclick="close()">Cerrar ✕</button>
+            <button class="closeBtn" id="close">Cerrar ✕</button>
             <div class="btnContainer">
                 <button class="menuBtn" id="gameintro" onclick="newGameIntro()">Q-Lo sucio 🎮</button>
                 <button class="menuBtn" id="tools" onclick="showAjustes()">Ajustes ⚙️</button>
@@ -299,7 +298,7 @@
     </div>
     <div class="version">
         <span class="compilacion" id="updateVer">Corroborando version. Espere...</span>
-        <h6 class="compilacion">Canal: <span id="channel" class="compilacion">N/A</span></h6>
+        <h6 class="compilacion"><span id="channel" class="compilacion">N/A</span>-release</h6>
         <h6 class="jarsoft">JARSoft</h6>
     </div>
 </footer>

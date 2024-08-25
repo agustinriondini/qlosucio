@@ -1,4 +1,13 @@
 ========================================<br><br>
+v1.2.3builld#9(xx082024)<br><br>
+-[Fix] Se corrigio la logica de clasificacion del jugador.<br>
+-[Fix] Correcciones visuales.<br>
+-[Update] Se agregaron variabes para los colores del juego.<br>
+-[Update] Se actualizo la informacion del menu de ayuda.<br>
+-[New] Se agrego una nueva funcion para calcular las probabilidaes de exito de la proxima ronda.<br>
+-[New] Se agrego en estadisticas las victorias ininterrumpidas.<br>
+
+========================================<br><br>
 v1.2.2builld#8(30062024)<br><br>
 -[Fix] Rectificacion de numeracion de build en version "build#8".<br>
 -[Fix] Ya no se permite dejar el campo nombre vacio.<br>

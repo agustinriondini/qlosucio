@@ -153,6 +153,7 @@ function displayChanges() {
             console.error('Error 101! No se puede cargar la información solicitada', error);
         });
 }
+
 function closechangelog(){
     document.getElementById("changelog").style.display = "none";
     document.getElementById("menuToggle").style.display = "flex";  

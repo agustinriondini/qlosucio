@@ -101,7 +101,7 @@
     align-items: center;
     margin: auto;
     z-index: 99;
-    border: double 0.2rem white;
+    border: double 0.2rem var(--color-border-light);
 }
 .reload_alert{
     color: #fff;
@@ -112,16 +112,16 @@
     min-height: 25px;
     max-height: 75px;
     aspect-ratio: 1/1;
-    border: solid 0.1rem white;
+    border: solid 0.1rem var(--color-border-light);
     border-radius: 50%;
     color: #fff;
     font-weight: bolder;
     font-size: 2rem;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--color-topandbottom);
 }
 #rebootBtn:hover{
-    background-color: rgba(1, 174, 249, 0.5);
+    background-color: var(--color-button-hovered);
     animation: rotateAnimation 2s linear infinite;
 }
 @media (max-width: 768px) {

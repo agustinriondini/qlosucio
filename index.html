@@ -59,7 +59,6 @@
                     <select name="selectorDificultad" id="oponente" required>
                         <option value="vsCpu" selected>VS Rookie</option>
                         <option value="allIn" hidden>Local versus</option>
-                        <option value="online" hidden>En linea</option>
                     </select>
                     <span id="machinePoints" class="points">0</span>
                     <h4 class="pointsStyle">Victorias🏆</h4>
@@ -74,6 +73,13 @@
             </div>
         </div>
     </div>
+    <div class="oddsContainer">
+        <div class="probCont">Probabilidad 🥇<span id="probRookie" class="prob"></span></div>
+        <div class="scrolling-text-container">
+            <h3 id="probTitle" class="probTitle"></h3>
+        </div>
+        <div class="probCont">Probabilidad 🥇<span id="probUser" class="prob"></span></div>
+    </div>    
     <div class="menuToggleContainer">
         <button id="menuToggle">⚙️</button>
     </div>
@@ -129,6 +135,14 @@
                     <div class="indice-metrico">
                         <h5 class="title-metricas">Partidas jugadas:</h5>
                         <span class="metricas-value" id="totalRondas">0</span>
+                    </div>
+                    <div class="indice-metrico">
+                        <h5 class="title-metricas">Triunfos consecutivos:</h5>
+                        <span class="metricas-value" id="userconsecutivas">0</span>
+                    </div>
+                    <div class="indice-metrico">
+                        <h5 class="title-metricas">Record triunfos consecutivos:</h5>
+                        <span class="metricas-value" id="maxConsecutivos">0</span>
                     </div>
                 </div>
             </div>
@@ -190,8 +204,8 @@
                     <p class="issueDescript">Si bien es realizado un test de rendimiento antes de actualizar cada version, si el juego funciona lento en tu dispositivo puede deberse a la velocidad de conexion o memoria ram disponible. Dependiendo del navegador que utilices, variará la cantidad de ram minima. Tambien podes reportar el error o el inconveniente</p>
                 </div>
                 <div class="issue">
-                    <h4 class="issueTitle">Un boton no funciona</h4>
-                    <p class="issueDescript">Los botones que se encuentren mas oscuros o grises estan deshabilitados por el momento. Próximamente estaran disponibles.</p>
+                    <h4 class="issueTitle">Errores en la partida</h4>
+                    <p class="issueDescript">Si detectas algun error durante la partida, podes reportarlo desde "Bugreport 🐛" ubicado al final de la pantalla principal. Describe el error lo mejor que puedas.</p>
                 </div>
                 <div class="issue">
                     <h4 class="issueTitle">Contacto</h4>

@@ -1,7 +1,7 @@
 /*menu container general*/
 .overGameSurface{
-    width: 100vw;
-    height: 50vh;
+    width: 100dvw;
+    height: 50dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,10 +10,10 @@
 }
 .menuContainer{
     height: 60%;
-    min-height: 270px;
+    min-height: 290px;
     max-height: 600px;
     aspect-ratio: 1/1.5;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--color-menu);
     backdrop-filter: blur(10px);
     position: absolute;
     justify-content: center;
@@ -68,11 +68,11 @@
     cursor: pointer;
     margin: auto;
     border: none;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--color-button-nothovered);
     transition: background-color 0.3s ease;
 }
 .menuBtn:hover, .closeBtn:hover{
-    background-color: rgba(1, 174, 249, 0.5);
+    background-color: var(--color-button-hovered);
     color: #fff;
     scale: 1.1;
     transition: ease-in-out 0.2s;

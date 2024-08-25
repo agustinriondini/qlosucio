@@ -21,9 +21,9 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--color-topandbottom);
     backdrop-filter: blur(10px);
-    box-shadow: inset 0px 0px 10px black;
+    
 }
 .gameDataContainer{
     width: 100%;
@@ -55,6 +55,81 @@
     color: #fff;
     font-weight: bolder;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--color-menu);
+}
+.scrolling-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: auto;
 }
 
+#probTitle {
+    display: inline-block;
+    animation: scrollText 15s linear infinite;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.oddsContainer{
+    width: 100dvw;
+    min-width: 300px;
+    max-width: 1000px;
+    height: 5dvh;
+    min-height: 60px;
+    max-height: 100px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-topandbottom);
+    backdrop-filter: blur(10px);
+}
+.probCont{
+    width: 25dvw;
+    min-width: 75px;
+    max-width: 250px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--color-menu);
+    color: var(--color-text-light);
+
+}
+.scrolling-text-container{
+    width: 50dvw;
+    min-width: 150px;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 50%;
+    font-weight: bolder;
+    font-size: 1rem;
+}

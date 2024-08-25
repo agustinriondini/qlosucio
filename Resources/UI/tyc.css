@@ -121,7 +121,7 @@
   z-index: 9999;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.7);
-  color: #ffff;
+  color: var(--color-text-light);
 }
 #displayChangelog {
   width: 90%;

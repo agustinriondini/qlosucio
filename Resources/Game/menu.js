@@ -21,5 +21,5 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("changelog").style.display = "none";
         }
     }
-    
+
 });

@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: 5px solid rgba(0, 0, 0, 0.3);
+    border: 5px solid var(--color-menu);
     border-radius: 50%;
     
 }
@@ -78,6 +78,6 @@
 }
 .player:hover{
     cursor:text;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--color-menu);
     color: black;
 }
